@@ -1,0 +1,3 @@
+- url: https://store.sony.com.my/collections/playstation-5-console
+  output: image.png
+  wait: 10000
