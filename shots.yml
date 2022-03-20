@@ -1,2 +1,5 @@
 - url: https://www.google.com
-  output: image.png
+  output: google.png
+- url: https://store.sony.com.my/collections/playstation-5-console
+  output: sony.png
+  
