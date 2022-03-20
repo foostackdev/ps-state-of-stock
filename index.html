@@ -21,7 +21,8 @@
         let url = 'data.json';
         $.getJSON(url).done(function (data) {
           console.log(data);
-          if (data.result) $('span.status-desc').text('Yes');
+          let status = data.result ? 'No' : 'Yes';
+          $('span.status-desc').text(status);
         });
       })();
     </script>
