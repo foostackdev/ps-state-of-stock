@@ -47,9 +47,16 @@ jobs:
               }
               fs.writeFileSync('shots.yml', line + '\n');
           }
-    - name: Take shots
+    #- name: Take shots
+    #  run: |
+    #    shot-scraper multi shots.yml
+    - name: Scrap data with JS
       run: |
-        shot-scraper multi shots.yml
+        shot-scraper \
+        https://store.sony.com.my/collections/playstation-5-console "({ \
+          result: document.querySelector('.box__content').innerText === 'Oops! Something has gone wrong.\nReturn To Home Page', \
+          timestamp: new Date().toLocaleDateString('en-us', { year: 'numeric', month: 'long', day: 'numeric' }) \
+        })" > data.json
     - name: Commit and push
       run: |-
         git config user.name "Automated"
