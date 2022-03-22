@@ -17,7 +17,7 @@
         <h3>Status: <span class="status-desc">No</span></h3>
       </hgroup>
       <div style="margin-bottom: 10px">
-        <small>Last Update: <span class="ts">x</span></small>
+        <small>Last Update: <span class="update_time">x</span></small>
       </div>
       <img src="sony.png" />
     </main>
@@ -28,7 +28,7 @@
           console.log(data);
           let status = data.result ? 'No' : 'Yes';
           $('span.status-desc').text(status);
-          $('span.ts').text(data.timestamp);
+          $('span.update_time').text(data.last_update_utc);
         });
       })();
     </script>
