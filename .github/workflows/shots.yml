@@ -50,7 +50,7 @@ jobs:
     #- name: Take shots
     #  run: |
     #    shot-scraper multi shots.yml
-    - name: Scrap data with JS
+    - name: Scrape data with JS
       run: |
         shot-scraper \
         https://store.sony.com.my/collections/playstation-5-console "({ \
