@@ -50,13 +50,18 @@ jobs:
     #- name: Take shots
     #  run: |
     #    shot-scraper multi shots.yml
-    - name: Scrape data with JS
+    #- name: Scrape data with JS
+    #  run: |
+    #    shot-scraper javascript \
+    #    https://store.sony.com.my/collections/playstation-5-console "({ \
+    #      result: document.querySelector('.box__content').innerText === 'Oops! Something has gone wrong.\nReturn To Home Page', \
+    #      timestamp: new Date().toLocaleDateString('en-us', { year: 'numeric', month: 'long', day: 'numeric' }) \
+    #    })" > data.json
+    - name: Scape data with JS (file)
       run: |
         shot-scraper javascript \
-        https://store.sony.com.my/collections/playstation-5-console "({ \
-          result: document.querySelector('.box__content').innerText === 'Oops! Something has gone wrong.\nReturn To Home Page', \
-          timestamp: new Date().toLocaleDateString('en-us', { year: 'numeric', month: 'long', day: 'numeric' }) \
-        })" > data.json
+        https://store.sony.com.my/collections/playstation-5-console \
+        -i scrape.js -o data.json
     - name: Commit and push
       run: |-
         git config user.name "Automated"
