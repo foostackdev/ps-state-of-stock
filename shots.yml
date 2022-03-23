@@ -1,4 +1,5 @@
 - url: https://www.google.com
   output: google.png
-- url: https://store.sony.com.my/collections/playstation-5-console
-  output: sony.png
+# no idea why, scraping this url takes ages to complete via gh action
+#- url: https://store.sony.com.my/collections/playstation-5-console
+#  output: sony.png
