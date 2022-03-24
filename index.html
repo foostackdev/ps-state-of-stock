@@ -17,7 +17,9 @@
         <h3>Status: <span class="status-desc">?</span></h3>
       </hgroup>
       <div style="margin-bottom: 10px">
-        <small>Last Update: <span class="update_time">?</span></small>
+        <small
+          >Last Update: <span class="update-timestamp">?/?/? ?:?:?</span></small
+        >
       </div>
       <img style="width: 640px" src="sony.png" />
       <a
@@ -85,7 +87,9 @@
           console.log(data);
           let status = data.result ? 'No' : 'Yes';
           $('span.status-desc').text(status);
-          $('span.update_time').text(data.last_update_utc);
+          $('span.update-timestamp').text(
+            new Date(data.timestamp).toLocaleString()
+          );
         });
       })();
     </script>
