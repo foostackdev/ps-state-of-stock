@@ -1,5 +1,6 @@
 - url: https://www.google.com
   output: google.png
+  height: 800
 - url: https://store.sony.com.my/collections/playstation-5-console
   output: sony.png
   height: 800
