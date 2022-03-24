@@ -80,7 +80,7 @@
     </main>
     <script>
       (function () {
-        let url = 'data.json';
+        let url = `data.json?${new Date().getTime()}`;
         $.getJSON(url).done(function (data) {
           console.log(data);
           let status = data.result ? 'No' : 'Yes';
