@@ -28,6 +28,9 @@ jobs:
         with:
           path: ~/.cache/ms-playwright/
           key: ${{ runner.os }}-browsers
+      - name: Update pip (if any)
+        run: |
+          pip install --upgrade pip
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
