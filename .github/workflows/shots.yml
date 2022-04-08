@@ -3,8 +3,10 @@ name: Take screenshots
 on:
   push:
   workflow_dispatch:
+  # ref: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
   schedule:
-    - cron: '15 * * * *'
+    #- cron: '15 * * * *' # every minute 15 of every hour of every day
+    - cron: '*/5 * * * *' # every 5 minute (shortest interval) of every hour of every day
 
 jobs:
   shot-scraper:
