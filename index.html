@@ -23,7 +23,7 @@
           >Last Update: <span class="update-timestamp">?/?/? ?:?:?</span></small
         >
       </div>
-      <img style="width: 640px" src="sony.png" />
+      <img id="banner" style="width: 640px" />
       <a
         href="https://github.com/foostackdev/ps-state-of-stock"
         class="github-corner"
@@ -93,6 +93,8 @@
             new Date(data.timestamp).toLocaleString()
           );
         });
+
+        $('#banner').attr('src', `sony.png?${new Date().getTime()}`);
       })();
     </script>
   </body>
