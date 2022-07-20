@@ -64,7 +64,7 @@ jobs:
       #      result: document.querySelector('.box__content').innerText === 'Oops! Something has gone wrong.\nReturn To Home Page', \
       #      timestamp: new Date().toLocaleDateString('en-us', { year: 'numeric', month: 'long', day: 'numeric' }) \
       #    })" > data.json
-      - name: Scape data with JS (file)
+      - name: Scrape data with JS (file)
         run: |
           shot-scraper javascript \
           https://store.sony.com.my/collections/playstation-5-console \
